@@ -26,4 +26,11 @@ app.get('/getcookies/:cookie', (req, res) => {
     res.send(cookie);
 });
 
+app.get('/deletecookie/:cookie', (req, res) => {
+    const param = req.params.cookie;
+    const cookie = res.clearCookie(param);
+    
+    res.send("cookie deleted");
+});
+
 module.exports = app;
