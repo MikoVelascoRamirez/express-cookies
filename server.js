@@ -19,4 +19,11 @@ app.get('/getcookies', (req, res) => {
     res.send(req.cookies);
 })
 
+app.get('/getcookies/:cookie', (req, res) => {
+    const param = req.params.cookie;
+    const cookie = req.cookies[param];
+    
+    res.send(cookie);
+});
+
 module.exports = app;
