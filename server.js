@@ -15,4 +15,8 @@ app.get('/setcookie', (req, res) => {
     res.send('algo')
 });
 
+app.get('/getcookies', (req, res) => {
+    res.send(req.cookies);
+})
+
 module.exports = app;
